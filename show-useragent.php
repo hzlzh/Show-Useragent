@@ -2,8 +2,8 @@
 /*
 Plugin Name: Show Useragent
 Plugin URI: http://zlz.im/show-useragent/
-Description: Show users country flag, web browser, operating system icons on your comment list.
-Version: 1.0.5
+Description: Display user’s country flag, web browser, operating system icons in your comment list.
+Version: 1.0.7
 Author: HzlzH,HieuDT
 Author URI: http://zlz.im/
 */

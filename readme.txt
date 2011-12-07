@@ -3,8 +3,8 @@ Contributors: hzlzh
 Donate link: http://zlz.im/show-useragent/
 Tags: user agent, web browser, ip, country, web browser, flags
 Requires at least: 2.6
-Tested up to: 3.1
-Stable tag: 1.0.5
+Tested up to: 3.3
+Stable tag: 1.0.7
 
 Show visitors' IP to Country Flag, Web Browser, Operating System icons on WordPreess comment list.
 
@@ -38,6 +38,12 @@ F&Q http://zlz.im/show-useragent/
 2. Configure on wp-admin
 
 == Changelog ==
+= V 1.0.7 =
+IP database version 2011.12.07
+
+= V 1.0.6 =
+IP database version 2011.10.08
+New support to IE9/Chrome OS/Windows 8/Mac OS X Lion
 
 = V 1.0.5 =
 IP database version 2011.03.29

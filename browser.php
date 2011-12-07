@@ -30,7 +30,11 @@ function CID_windows_detect_os($ua) {
 	} elseif (preg_match('/Windows NT 6.1/i', $ua)) {
 		$os_name = "Windows";
 		$os_code = "windows_win7";
-		$os_ver = "7";		
+		$os_ver = "7";	
+	} elseif (preg_match('/Windows NT 6.2/i', $ua)) {
+		$os_name = "Windows";
+		$os_code = "windows_win8";
+		$os_ver = "8";	
 	} elseif (preg_match('/Windows NT 5.1/i', $ua)) {
 		$os_name = "Windows";
 		$os_code = "windows";
@@ -143,11 +147,11 @@ function CID_unix_detect_os($ua) {
 	} elseif (preg_match('/SunOS/i', $ua)) {
 		$os_name = "Solaris";
 		$os_code = "sun";
-	} elseif (preg_match('#iPod.*.CPU.([a-zA-Z0-9.( _)]+);#i', $ua, $matches)) {
+	} elseif (preg_match('#iPod.*.CPU.([a-zA-Z0-9.( _)]+)#i', $ua, $matches)) {
 		$os_name = "iPod";
 		$os_code = "iphone";
 		$os_ver = $matches[1];
-	} elseif (preg_match('#iPhone.*.CPU.([a-zA-Z0-9.( _)]+);#i', $ua, $matches)) {
+	} elseif (preg_match('#iPhone.*.CPU.([a-zA-Z0-9.( _)]+)#i', $ua, $matches)) {
 		$os_name = "iPhone";
 		$os_code = "iphone";
 		$os_ver = $matches[1];
@@ -155,20 +159,24 @@ function CID_unix_detect_os($ua) {
 		$os_name = "iPad";
 		$os_code = "ipad";
 		$os_ver = $matches[1];
-	} elseif (preg_match('/Mac OS X/i', $ua)) {
+	} elseif (preg_match('/Mac OS X.([0-9. _]+)/i', $ua, $matches)) {
 		$os_name = "Mac OS";
 		$os_code = "macos";
-		$os_ver = "X";
+		if(count(explode(7,$matches[1]))>1) $matches[1] = 'Lion '.$matches[1];
+		$os_ver = "X ".$matches[1];
 	} elseif (preg_match('/Macintosh/i', $ua)) {
 		$os_name = "Mac OS";
 		$os_code = "macos";
 	} elseif (preg_match('/Unix/i', $ua)) {
 		$os_name = "UNIX";
 		$os_code = "unix";
+	} elseif (preg_match('/CrOS/i', $ua)){
+		$os_name="Google Chrome OS";
+		$os_code="chromeos";
 	} else{
         $os_name = 'Unknow Os';
 		$os_code = 'other';
-	  }
+	}
 	  
 	return array($os_name, $os_code, $os_ver);
 }
@@ -512,12 +520,20 @@ function CID_detect_browser($ua) {
 		$browser_code = 'opera';
 		preg_match('#Opera/([a-zA-Z0-9.]+)#i', $ua, $matches);
 		$browser_ver = $matches[1];
-		list($os_name, $os_code, $os_ver, $pda_name, $pda_code, $pda_ver) = CID_pda_detect_os($ua);
+		if (preg_match('/Windows/i', $ua)) {
+			list($os_name, $os_code, $os_ver) = CID_windows_detect_os($ua);
+		} else {
+			list($os_name, $os_code, $os_ver) = CID_unix_detect_os($ua);
+		}
 	} elseif (preg_match('#Opera.(.*)Version[ /]([a-zA-Z0-9.]+)#i', $ua, $matches)) {
 		$browser_name = 'Opera';
 		$browser_code = 'opera';
-		$browser_ver = $matches[1];
-		list($os_name, $os_code, $os_ver) = CID_windows_detect_os($ua);
+		$browser_ver = $matches[2];
+		if (preg_match('/Windows/i', $ua)) {
+			list($os_name, $os_code, $os_ver) = CID_windows_detect_os($ua);
+		} else {
+			list($os_name, $os_code, $os_ver) = CID_unix_detect_os($ua);
+		}
 		if (!$os_name) {
 			list($os_name, $os_code, $os_ver) = CID_unix_detect_os($ua);
 		}
@@ -529,6 +545,15 @@ function CID_detect_browser($ua) {
 				$os_name = "Nintendo Wii";
 				$os_code = "nintendo-wii";
 			}
+		}
+	} elseif (preg_match('#Opera/([a-zA-Z0-9.]+)#i', $ua, $matches)) {
+		$browser_name = 'Opera Mini';
+		$browser_code = 'opera';
+		$browser_ver = $matches[1];
+		if (preg_match('/Windows/i', $ua)) {
+			list($os_name, $os_code, $os_ver) = CID_windows_detect_os($ua);
+		} else {
+			list($os_name, $os_code, $os_ver) = CID_unix_detect_os($ua);
 		}
 	} elseif (preg_match('#WebPro/([a-zA-Z0-9.]+)#i', $ua, $matches)) {
 		$browser_name = 'WebPro';
@@ -645,6 +670,8 @@ function CID_detect_browser($ua) {
 			$browser_code = 'ie8';
 		elseif ( strpos($browser_ver, '9') !== false)
 			$browser_code = 'ie9';
+		elseif ( strpos($browser_ver, '10') !== false)
+			$browser_code = 'ie10';
 		else
 			$browser_code = 'ie';
 		list($os_name, $os_code, $os_ver, $pda_name, $pda_code, $pda_ver) = CID_windows_detect_os($ua);
