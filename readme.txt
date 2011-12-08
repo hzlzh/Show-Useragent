@@ -6,7 +6,7 @@ Requires at least: 2.6
 Tested up to: 3.3
 Stable tag: 1.0.7
 
-Show visitors' IP to Country Flag, Web Browser, Operating System icons on WordPreess comment list.
+Display visitor's IP to Country Flag, Web Browser info, Operating System icons in WordPreess comment list.
 
 == Description ==
 
@@ -16,7 +16,7 @@ Base on the WordPress plugin [Comment Info Detector](http://wordpress.org/extend
 The original author has not updated that plugin any more. But still so many wp users hope to use the new IP database and new browser icos, so i make it a new branches named "Show Useragent" to keep update.
 
   More details:
-In this plugin, more browser and OS will be distinguish like IE9/Chrome8/FireFox 4/android/iPad ect.
+In this plugin, more browser and OS will be distinguished like IE9+/Chrome8+/FireFox 4+/Android/iPad/iPhone 4S ect.
 And also IP database will always be the newest one.
 
 I'll update it [WordPress Plugin Page](http://wordpress.org/extend/plugins/show-useragent/ "Show Useragent") and [HzlzH 's Blog](http://zlz.im/show-useragent/ "HzlzH 's Blog")

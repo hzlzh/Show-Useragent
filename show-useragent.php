@@ -2,7 +2,7 @@
 /*
 Plugin Name: Show Useragent
 Plugin URI: http://zlz.im/show-useragent/
-Description: Display user’s country flag, web browser, operating system icons in your comment list.
+Description: Display user’s country flag, web browser info, operating system icons in WordPress comment list.
 Version: 1.0.7
 Author: HzlzH,HieuDT
 Author URI: http://zlz.im/
@@ -34,7 +34,7 @@ function CID_init() {
 add_action('activate_show-useragent/show-useragent.php', 'CID_init');
 
 function CID_options_page() {
-	add_options_page('Show-Useragent Options', 'Show-Useragent', 10, 'show-useragent/options.php');
+	add_options_page('Show-Useragent Options', 'Show-Useragent', 'manage_options', 'show-useragent/options.php');
 }
 add_action('admin_menu', 'CID_options_page');
 

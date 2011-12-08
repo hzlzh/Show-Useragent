@@ -89,15 +89,24 @@ function CID_windows_detect_os($ua) {
 function CID_unix_detect_os($ua) {
 	$os_name = $os_ver = $os_code = null;
 		if (preg_match('/Linux/i', $ua)) {
-		$os_name = "Linux";
-		$os_code = "linux";
+			$os_name = "Linux";
+			$os_code = "linux";
 		if (preg_match('#Debian#i', $ua)) {
 			$os_code = "debian";
 			$os_name = "Debian GNU/Linux";
 		} elseif (preg_match('#Mandrake#i', $ua)) {
 			$os_code = "mandrake";
 			$os_name = "Mandrake Linux";
-		}elseif (preg_match('#Android#i',$ua)) {//Android
+		} elseif (preg_match('#Kindle Fire#i',$ua)) {//for Kindle Fire
+	 		$matches = explode(';',$ua);
+	 		$os_code = "kindle";
+	 		$matches2 = explode(')',$matches[4]);
+	 		$os_name = $matches[2].$matches2[0];
+		} elseif (preg_match('#Kindle([a-zA-Z0-9 ./]+)#i', $ua, $matches)) {//for Kindle
+			$os_name = "kindle";
+	 		$os_code = "kindle";
+			$os_ver = $matches[1];
+		} elseif (preg_match('#Android#i',$ua)) {//for Android
 			$matches = explode(';',$ua);
 			$os_code = "android";
 			$matches2 = explode(')',$matches[4]);
@@ -181,7 +190,7 @@ function CID_unix_detect_os($ua) {
 	return array($os_name, $os_code, $os_ver);
 }
 
-function CID_pda_detect_os($ua) {
+function CID_pda_detect_os($ua) {echo $ua;
 	$os_name = $os_code = $os_ver = $pda_name = $pda_code = $pda_ver = null;
 	if (preg_match('#PalmOS#i', $ua)) {
 		$os_name = "Palm OS";
@@ -198,12 +207,7 @@ function CID_pda_detect_os($ua) {
 	} elseif (preg_match('#Symbian#i', $ua)) {
 		$os_name = "Symbian OS";
 		$os_code = "symbian";
-	} else{
-        $os_name = 'Unknow Os';
-		$os_code = 'other';
-	  }
-
-	if (preg_match('#PalmOS/sony/model#i', $ua)) {
+	} elseif (preg_match('#PalmOS/sony/model#i', $ua)) {
 		$pda_name = "Sony Clie";
 		$pda_code = "sony";
 	} elseif (preg_match('#Zaurus ([a-zA-Z0-9.]+)#i', $ua, $matches)) {
@@ -238,11 +242,14 @@ function CID_pda_detect_os($ua) {
 		$pda_name = "SonyEricsson";
 		$pda_code = "sonyericsson";
 		$pda_ver = $matches[1];
+	}elseif (preg_match('#Kindle([a-zA-Z0-9 . /]+)#i', $ua, $matches)) {
+		$pda_name = "Kindle";
+		$pda_code = "Kindle";
+		$pda_ver = $matches[1];
 	} else{
 	  	$pda_name = 'Unknow Os';
 		$pda_code = 'other';
-	  }
-	  
+	}
 	return array($os_name, $os_code, $os_ver, $pda_name, $pda_code, $pda_ver);
 }
 

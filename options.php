@@ -1,6 +1,11 @@
 <?php
 
+if(array_key_exists('mode',$_GET)){
+if(!$_GET['mode'])
 $mode = trim($_GET['mode']);
+}
+else
+$mode = "";
 
 $CID_settings = array('CID_options');
 
