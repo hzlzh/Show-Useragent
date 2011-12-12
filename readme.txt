@@ -35,7 +35,8 @@ F&Q http://zlz.im/show-useragent/
 == Screenshots ==
 
 1. Display on comment list.
-2. Configure on wp-admin
+2. Display on WordPress admin Dashboard.
+3. Configure on wp-admin.
 
 == Changelog ==
 = V 1.0.7 =
