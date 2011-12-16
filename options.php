@@ -24,7 +24,7 @@ if (!empty($_POST['Submit'])) {
 	$update_queries[] = update_option('CID_options', $CID_options);
 	
 	$update_text = array();
-	$update_text[] = __('Show-Useragent Options', 'show-useragent');
+	$update_text[] = __('Show Useragent Options', 'show-useragent');
 	
 	$i=0;
 	$text = '';
@@ -72,8 +72,8 @@ switch($mode) {
 			$deactivate_url = wp_nonce_url($deactivate_url, 'deactivate-plugin_show-useragent/show-useragent.php');
 		}
 		echo '<div class="wrap">';
-		echo '<h2>'.__('Uninstall Show-Useragent', 'show-useragent').'</h2>';
-		echo '<p><strong>'.sprintf(__('<a href="%s">Click here</a> to finish the uninstallation and Show-Useragent will be deactivated automatically.', 'show-useragent'), $deactivate_url).'</strong></p>';
+		echo '<h2>'.__('Uninstall Show Useragent', 'show-useragent').'</h2>';
+		echo '<p><strong>'.sprintf(__('<a href="%s">Click here</a> to finish the uninstallation and Show Useragent will be deactivated automatically.', 'show-useragent'), $deactivate_url).'</strong></p>';
 		echo '</div>';
 		break;
 		
@@ -105,7 +105,7 @@ switch($mode) {
 <?php if (!empty($text)) { echo '<div id="message" class="updated fade"><p>'.$text.'</p></div>'; } ?>
 <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>"> 
 <div class="wrap"> 
-	<h2><?php _e('Show-Useragent Options', 'show-useragent'); ?></h2>
+	<h2><?php _e('Show Useragent Options', 'show-useragent'); ?></h2>
 	<table class="form-table">
 		<tr>
 			<td valign="top">
@@ -195,7 +195,7 @@ switch($mode) {
 
 <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>"> 
 <div class="wrap"> 
-	<h2><?php _e('Uninstall Show-Useragent', 'show-useragent'); ?></h2>
+	<h2><?php _e('Uninstall Show Useragent', 'show-useragent'); ?></h2>
 	<p>
 		<input type="checkbox" name="uninstall_cid_yes" value="yes" />&nbsp;<?php _e('Yes', 'show-useragent'); ?><br /><br />
 		<input type="submit" name="do" value="<?php _e('UNINSTALL', 'show-useragent'); ?>" class="button" onclick="return confirm('<?php _e('Are you sure to uninstall this plugin?\nChoose [Cancel] to stop, [OK] to uninstall.', 'show-useragent'); ?>')" />

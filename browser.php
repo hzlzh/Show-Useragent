@@ -182,6 +182,10 @@ function CID_unix_detect_os($ua) {
 	} elseif (preg_match('/CrOS/i', $ua)){
 		$os_name="Google Chrome OS";
 		$os_code="chromeos";
+	} elseif (preg_match('/Fedor.([0-9. _]+)/i', $ua, $matches)){
+		$os_name="Fedora";
+		$os_code="fedora";
+		$os_ver = $matches[1];
 	} else{
         $os_name = 'Unknow Os';
 		$os_code = 'other';
