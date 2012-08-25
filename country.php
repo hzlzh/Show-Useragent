@@ -12,12 +12,16 @@ function CID_get_country($ip) {
 }
 
 function CID_get_flag($ip) {
+	if($ip == '127.0.0.1'){
+		$code = 'wordpress';
+		$name = 'Localhost';
+	}else{
 	$country = CID_get_country($ip);
 	if (!$country) return "";
 	
 	$code = strtolower($country['id2']);
 	$name = $country['name'];
-	
+	}
 	global $CID_options;
 	
 	$output = stripslashes($CID_options['flag_template']);
@@ -33,12 +37,17 @@ function CID_get_flag($ip) {
 }
 
 function CID_get_flag_without_template($ip, $show_image = true, $show_text = true, $before = '', $after = '') {
+	if($ip == '127.0.0.1'){
+		$code = 'wordpress';
+		$name = 'Localhost';
+	}else{
+
 	$country = CID_get_country($ip);
 	if (!$country) return "";
 	
 	$code = strtolower($country['id2']);
 	$name = $country['name'];
-	
+	}
 	global $CID_options;
 	
 	$output = '';

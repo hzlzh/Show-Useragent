@@ -1,0 +1,133 @@
+# Copyright (C) 2010 Dot-B in French
+# This file is distributed under the same license as the Dot-B package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Show Useragent 1.0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-19 14:21+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: hzlzh <hzlzh.dev@gmail.com>\n"
+"Language-Team: hzlzh <hzlzh.dev@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: options.php:28
+#: options.php:109
+msgid "Show Useragent Options"
+msgstr "Show Useragent 配置"
+
+#: options.php:34
+msgid "Updated"
+msgstr "更新"
+
+#: options.php:39
+msgid "No Option Updated"
+msgstr "没有任何更新变动"
+
+#: options.php:45
+#: options.php:202
+msgid "UNINSTALL"
+msgstr "卸载"
+
+#: options.php:53
+#, php-format
+msgid "Setting key '%s' has been deleted."
+msgstr "选项 '%s' 已经被删除"
+
+#: options.php:57
+#, php-format
+msgid "Cannot delete setting key '%s'."
+msgstr "无法删除选项值 '%s'。"
+
+#: options.php:76
+#: options.php:199
+msgid "Uninstall Show Useragent"
+msgstr "卸载Show Useragent"
+
+#: options.php:77
+#, php-format
+msgid "<a href=\"%s\">Click here</a> to finish the uninstallation and Show Useragent will be deactivated automatically."
+msgstr "<a href=\"%s\">点击这里</a> 来完成 Show Useragent 的卸载操作，之后插件为未激活状态"
+
+#: options.php:113
+msgid "Country Flag Icons Base URL:"
+msgstr "国旗图标URL："
+
+#: options.php:114
+#: options.php:140
+msgid "Restore Default URL"
+msgstr "重置为系统默认URL"
+
+#: options.php:123
+msgid "Country Flag Template:"
+msgstr "国旗图标模板："
+
+#: options.php:124
+#: options.php:150
+msgid "Allowed Variables:"
+msgstr "可用参数："
+
+#: options.php:130
+#: options.php:161
+msgid "Restore Default Template"
+msgstr "重置为默认模板"
+
+#: options.php:139
+msgid "Web Browser and OS Icons Base URL:"
+msgstr "浏览器和操作系统图标URL："
+
+#: options.php:149
+msgid "Web Browser and OS Template:"
+msgstr "浏览器和操作系统模板"
+
+#: options.php:168
+msgid "Display Country Flags Automatically:"
+msgstr "自动智能插入国旗图标"
+
+#: options.php:171
+#: options.php:182
+msgid "No"
+msgstr "否"
+
+#: options.php:172
+#: options.php:183
+#: options.php:201
+msgid "Yes"
+msgstr "是"
+
+#: options.php:173
+#: options.php:184
+msgid "Yes but don't display in WP-Admin"
+msgstr "显示，但不在后台显示"
+
+#: options.php:175
+#: options.php:186
+msgid "Use this option if you don't want to modify your theme code"
+msgstr "选择此项，当你不想手动插入代码到主题文件时"
+
+#: options.php:179
+msgid "Display Web Browsers and OS Automatically:"
+msgstr "自动智能显示浏览器和操作系统图标"
+
+#: options.php:191
+msgid "Save Changes"
+msgstr "保存设置"
+
+#: options.php:202
+msgid ""
+"Are you sure to uninstall this plugin?\\n"
+"Choose [Cancel] to stop, [OK] to uninstall."
+msgstr ""
+"你确定要卸载此插件吗？\\n"
+"选择 [Cancel] 停止操作， [OK] 继续操作。"
+
+#~ msgid "Bad Behaviour not found. Please check your install."
+#~ msgstr "找不到 Bad Behaviour. 请检查您的安装。"
