@@ -15,7 +15,7 @@ A plugin to Show UserAgent information in comments list.
 In this plugin, more browsers and OSs will be distinguish like IE10/Chrome OS/New iPad/Kindle Fire ect.
 Also the IP database will always be the newest one.
 
-I'll update it in [WordPress Plugin Page](http://wordpress.org/extend/plugins/show-useragent/ "Show UserAgent") and [hzlzh 's Blog](https://zlz.im/show-useragent/ "hzlzh 's Blog")
+Release Page: [WordPress Plugin Page](http://wordpress.org/extend/plugins/show-useragent/ "Show UserAgent") and [hzlzh 's Blog](https://zlz.im/show-useragent/ "hzlzh 's Blog")
 
 == Installation ==
 
