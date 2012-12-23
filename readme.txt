@@ -1,10 +1,10 @@
 === Show UserAgent ===
 Contributors: hzlzh, HieuDT
-Donate link: http://zlz.im/show-useragent/
+Donate link: https://zlz.im/show-useragent/
 Tags: user agent, web browser, ip, country, web browser, flags
 Requires at least: 2.6
 Tested up to: 3.4.1
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 
 Show visitors' IP to Country Flag, Web Browser, Operating System icons on WordPreess comment list.
 
@@ -15,7 +15,7 @@ A plugin to Show UserAgent information in comments list.
 In this plugin, more browsers and OSs will be distinguish like IE10/Chrome OS/New iPad/Kindle Fire ect.
 Also the IP database will always be the newest one.
 
-I'll update it in [WordPress Plugin Page](http://wordpress.org/extend/plugins/show-useragent/ "Show UserAgent") and [hzlzh 's Blog](http://zlz.im/show-useragent/ "hzlzh 's Blog")
+I'll update it in [WordPress Plugin Page](http://wordpress.org/extend/plugins/show-useragent/ "Show UserAgent") and [hzlzh 's Blog](https://zlz.im/show-useragent/ "hzlzh 's Blog")
 
 == Installation ==
 
@@ -26,7 +26,7 @@ I'll update it in [WordPress Plugin Page](http://wordpress.org/extend/plugins/sh
 
 == Frequently Asked Questions ==
 
-F&Q http://zlz.im/show-useragent/
+F&Q https://zlz.im/show-useragent/
 
 == Screenshots ==
 
@@ -34,6 +34,11 @@ F&Q http://zlz.im/show-useragent/
 2. Configure on /wp-admin/
 
 == Changelog ==
+
+= V 1.0.9 =
+Change IP database from Software77(http://software77.net/cgi-bin/ip-country/geo-ip.pl) to Webhosting.info(http://ip-to-country.webhosting.info/)
+IP database version 2012.12.10
+New icon for Windows 8
 
 = V 1.0.8 =
 IP database version 2012.08.25

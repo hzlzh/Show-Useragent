@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Show UserAgent
-Plugin URI: http://zlz.im/show-useragent/
+Plugin URI: https://zlz.im/show-useragent/
 Description: Show visitors' IP to Country Flag, Web Browser, Operating System icons on WordPreess comment list.
-Version: 1.0.8
+Version: 1.0.9
 Author: HzlzH
-Author URI: http://zlz.im/
+Author URI: https://zlz.im/
 */
 
 if (!defined('WP_CONTENT_DIR')) {
