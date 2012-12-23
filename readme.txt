@@ -3,7 +3,7 @@ Contributors: hzlzh, HieuDT
 Donate link: https://zlz.im/show-useragent/
 Tags: user agent, web browser, ip, country, web browser, flags
 Requires at least: 2.6
-Tested up to: 3.4.1
+Tested up to: 3.5
 Stable tag: 1.0.9
 
 Show visitors' IP to Country Flag, Web Browser, Operating System icons on WordPreess comment list.
