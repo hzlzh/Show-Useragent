@@ -2,7 +2,7 @@
 
 $CID_image_url = $CID_options['WB_OS_icons_url'];
 
-$CID_width_height = "14px";
+$CID_width_height = "14"; //14px
 
 function CID_windows_detect_os($ua) {
 	$os_name = $os_code = $os_ver = $pda_name = $pda_code = $pda_ver = null;
